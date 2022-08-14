@@ -1,0 +1,12 @@
+name: execute shell commands
+on: push
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "This is my first github actions setup"
+      - name: multiple commands executions
+        run: |
+            git --version
+            npm -v
